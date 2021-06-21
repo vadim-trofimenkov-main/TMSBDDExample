@@ -9,7 +9,6 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
 import pages.WikiMainPage;
 import pages.WikiSearchPage;
 
@@ -28,7 +27,7 @@ public class SearchSteps {
 
     @Before
     public void init() {
-        WebDriverManager.chromedriver().driverVersion("89").setup();
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
 
